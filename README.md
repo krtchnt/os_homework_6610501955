@@ -1,6 +1,12 @@
 # OS Homework 2025 – 6610501955
 
-Student ID: `6610501955`
+Author: *6610501955 Kritchanat Thanapiphatsiri*
+
+> [!IMPORTANT]
+> This report was made under the **01204332 Operating Systems** course of **Department of Computer Engineering**,
+  **Faculity of Engineering**, **Kasetsart University**.
+>
+> This repository is published for educational use under the said coursework and is not intended for production deployment.
 
 This repository contains three implementations plus the accompanying analysis for the Operating Systems report.
 

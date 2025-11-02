@@ -1,5 +1,5 @@
 #let title = "Operating Systems Report 2025"
-#let student = "6610501955 Kritchanat Thanapiphatsiri"
+#let author = "6610501955 Kritchanat Thanapiphatsiri"
 
 #set page(width: 210mm, height: 297mm, margin: (
   top: 25mm,
@@ -11,7 +11,7 @@
 
 = #title
 
-*Student:* #student
+*Author:* #author
 
 *Date:* 2025-11-02
 
