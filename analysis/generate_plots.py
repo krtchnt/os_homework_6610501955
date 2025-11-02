@@ -62,12 +62,20 @@ def summarise_parallel(results):
                     "threads": threads,
                     "avg_time_ms": avg_time,
                     "speedup": speedup,
-                    "parallel_fraction": parallel_fraction if parallel_fraction else 0.0,
+                    "parallel_fraction": parallel_fraction
+                    if parallel_fraction
+                    else 0.0,
                 }
             )
     summary_path = DATA_DIR / "parallel_summary.csv"
     with summary_path.open("w", newline="") as csvfile:
-        fieldnames = ["number", "threads", "avg_time_ms", "speedup", "parallel_fraction"]
+        fieldnames = [
+            "number",
+            "threads",
+            "avg_time_ms",
+            "speedup",
+            "parallel_fraction",
+        ]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in summary_rows:
@@ -185,7 +193,7 @@ def load_cow_results():
 
 
 def generate_cow_plot(summary):
-    labels = [f'{entry["size_mb"]} MB' for entry in summary]
+    labels = [f"{entry['size_mb']} MB" for entry in summary]
     stages = [
         ("Parent RSS", "parent_rss_kb"),
         ("Child after fork", "child_post_fork_rss_kb"),
@@ -199,9 +207,7 @@ def generate_cow_plot(summary):
     fig, ax = plt.subplots(figsize=(10, 6))
 
     for idx, (stage_label, key) in enumerate(stages):
-        offsets = [
-            pos + (idx - (len(stages) - 1) / 2) * bar_width for pos in positions
-        ]
+        offsets = [pos + (idx - (len(stages) - 1) / 2) * bar_width for pos in positions]
         values = [entry[key] for entry in summary]
         color = COLORS[idx % len(COLORS)]
         bars = ax.bar(

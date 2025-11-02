@@ -6,7 +6,8 @@
 
   # https://devenv.sh/packages/
   # packages = [ pkgs.git ];
-  packages = [ pkgs.codespell ];
+  packages = let inherit (pkgs) codespell basedpyright ruff; in [ codespell
+  basedpyright ruff ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
