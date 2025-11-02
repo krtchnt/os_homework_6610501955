@@ -8,7 +8,7 @@
 
 The binary accepts several CLI flags to explore different workloads:
 
-```
+```bash
 ./parallel \
   --numbers 600851475143,32416190071 \
   --threads 1-8 \

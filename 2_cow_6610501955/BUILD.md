@@ -1,12 +1,12 @@
 # Build Instructions
 
-```
+```bash
 rustc --edition=2021 -C opt-level=3 cow.rs -o cow
 ```
 
 Run the executable directly:
 
-```
+```bash
 ./cow --sizes 64,96,128 --output ../data/cow_results.csv
 ```
 

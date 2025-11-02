@@ -26,7 +26,7 @@ This repository contains three implementations plus the accompanying analysis fo
 
 ### 1. Parallel Factorisation (C++)
 
-```
+```bash
 cd 1_parallel_6610501955
 make CXX=g++
 ./parallel --numbers 600851475143,9999999967,899809363 --threads 1-8 --repeats 3 \
@@ -37,7 +37,7 @@ Edit the CLI flags to explore different workloads or scheduling choices. The pro
 
 ### 2. Copy-on-Write Demonstrator (Rust)
 
-```
+```bash
 cd 2_cow_6610501955
 rustc --edition=2021 -C opt-level=3 cow.rs -o cow
 ./cow --sizes 64,96,128 --output ../data/cow_results.csv
@@ -52,7 +52,7 @@ The program forks once per experiment, touches memory pages in the child, and lo
 
 ### 3. Deadlock Laboratory (Rust)
 
-```
+```bash
 cd 3_deadlock_6610501955
 rustc --edition=2021 -C opt-level=3 deadlock.rs -o deadlock
 ./deadlock --mode avoidance     # Banker's algorithm walkthrough
@@ -64,7 +64,7 @@ The simulation uses three resource types and three worker threads. Deadlock avoi
 
 ### Analysis Scripts & Plots
 
-```
+```bash
 cd /home/fdl/Code/._/0/os_homework_6610501955
 python analysis/generate_plots.py
 ```
@@ -83,7 +83,7 @@ These artefacts are referenced inside the Typst report.
 
 Compile the report after regenerating data/plots:
 
-```
+```bash
 typst compile report_6610501955.typ
 ```
 
