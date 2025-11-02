@@ -73,8 +73,8 @@ Observations:
 
 The generated `data/parallel_summary.csv` tabulates averages, speedups, and
 Amdahl parallel fraction estimates via `P = (1 - 1/S) / (1 - 1/n)` where `S` is
-observed speedup and `n` is thread count. These figures are referenced in
-Section 5 for cross-task synthesis.
+observed speedup and `n` is thread count, as derived from Amdahl's law
+@amdahl1967. These figures are referenced in Section 5 for cross-task synthesis.
 
 == 2. Copy-on-Write Demonstration (Rust)
 
@@ -120,7 +120,7 @@ The `deadlock` program provides three modes.
 
 === 3.1 Deadlock Avoidance (Banker's Algorithm)
 
-Using the classic example from Silberschatz et al.[^silberschatz], the tool
+Using the classic example from Silberschatz et al. @silberschatz2018, the tool
 computes a safe sequence `[P1, P3, P4, P0, P2]` and evaluates ad-hoc requests.
 For instance, P1's request `[1,0,2]` is deemed safe, whereas P0's `[3,3,0]`
 would violate safety and is rejected. The implementation constructs the `need`
@@ -166,11 +166,4 @@ faults, and the deadlock laboratory ties together avoidance, detection, and
 recovery. The provided scripts and CSV artefacts enable re-running the
 experiments and regenerating every figure without manual intervention.
 
-== References
-
-[^amdahl]: Gene M. Amdahl, "Validity of the Single Processor Approach to
-Achieving Large Scale Computing Capabilities," *AFIPS Conference
-Proceedings*, 1967.
-
-[^silberschatz]: Abraham Silberschatz, Peter B. Galvin, and Greg Gagne,
-*Operating System Concepts*, 10th Edition, Wiley, 2018.
+#bibliography("references.bib", title: "References")
