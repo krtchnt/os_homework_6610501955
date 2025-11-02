@@ -6,6 +6,7 @@
 
   # https://devenv.sh/packages/
   # packages = [ pkgs.git ];
+  packages = [ pkgs.codespell ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
@@ -23,6 +24,7 @@
       venv = {
 	enable = true;
 	requirements = ''
+	  matplotlib==3.10.7
 	'';
       };
     };

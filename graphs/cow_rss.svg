@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<title>Copy-on-Write RSS Observations</title>
+<text x="360.0" y="30" text-anchor="middle" font-size="16" fill="#111" font-weight="bold">Copy-on-Write RSS Observations</text>
+<text x="20" y="240.0" transform="rotate(-90 20 240.0)" text-anchor="middle" font-size="14" fill="#111">RSS (kB)</text>
+<line x1="70" y1="70" x2="70" y2="410" stroke="#333" stroke-width="1.5"/>
+<line x1="70" y1="410" x2="650" y2="410" stroke="#333" stroke-width="1.5"/>
+<line x1="70" y1="410.0" x2="650" y2="410.0" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="414.0" text-anchor="end" font-size="12" fill="#333">0</text>
+<line x1="70" y1="342.0" x2="650" y2="342.0" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="346.0" text-anchor="end" font-size="12" fill="#333">29373</text>
+<line x1="70" y1="274.0" x2="650" y2="274.0" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="278.0" text-anchor="end" font-size="12" fill="#333">58747</text>
+<line x1="70" y1="205.99999999999997" x2="650" y2="205.99999999999997" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="209.99999999999997" text-anchor="end" font-size="12" fill="#333">88120</text>
+<line x1="70" y1="138.0" x2="650" y2="138.0" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="142.0" text-anchor="end" font-size="12" fill="#333">117494</text>
+<line x1="70" y1="70.0" x2="650" y2="70.0" stroke="#ccc" stroke-width="0.5"/>
+<text x="60" y="74.0" text-anchor="end" font-size="12" fill="#333">146867</text>
+<text x="166.66666666666669" y="435" text-anchor="middle" font-size="12" fill="#333">64 MB</text>
+<rect x="94.16666666666667" y="252.94970435957285" width="43.5" height="157.05029564042715" fill="#1f77b4" />
+<text x="115.91666666666667" y="247.94970435957285" text-anchor="middle" font-size="11" fill="#333">67840</text>
+<rect x="142.5" y="256.24627896145915" width="43.5" height="153.75372103854085" fill="#ff7f0e" />
+<text x="164.25" y="251.24627896145915" text-anchor="middle" font-size="11" fill="#333">66416</text>
+<rect x="190.83333333333334" y="256.08885826417804" width="43.5" height="153.91114173582196" fill="#2ca02c" />
+<text x="212.58333333333334" y="251.08885826417804" text-anchor="middle" font-size="11" fill="#333">66484</text>
+<text x="360.00000000000006" y="435" text-anchor="middle" font-size="12" fill="#333">96 MB</text>
+<rect x="287.50000000000006" y="176.77660695755904" width="43.5" height="233.22339304244096" fill="#1f77b4" />
+<text x="309.25000000000006" y="171.77660695755904" text-anchor="middle" font-size="11" fill="#333">100744</text>
+<rect x="335.83333333333337" y="180.3695028719745" width="43.5" height="229.6304971280255" fill="#ff7f0e" />
+<text x="357.58333333333337" y="175.3695028719745" text-anchor="middle" font-size="11" fill="#333">99192</text>
+<rect x="384.16666666666674" y="180.21208217469342" width="43.5" height="229.78791782530658" fill="#2ca02c" />
+<text x="405.91666666666674" y="175.21208217469342" text-anchor="middle" font-size="11" fill="#333">99260</text>
+<text x="553.3333333333334" y="435" text-anchor="middle" font-size="12" fill="#333">128 MB</text>
+<rect x="480.83333333333337" y="100.90909090909093" width="43.5" height="309.09090909090907" fill="#1f77b4" />
+<text x="502.58333333333337" y="95.90909090909093" text-anchor="middle" font-size="11" fill="#333">133516</text>
+<rect x="529.1666666666667" y="104.51124686452289" width="43.5" height="305.4887531354771" fill="#ff7f0e" />
+<text x="550.9166666666667" y="99.51124686452289" text-anchor="middle" font-size="11" fill="#333">131960</text>
+<rect x="577.5" y="104.35382616724178" width="43.5" height="305.6461738327582" fill="#2ca02c" />
+<text x="599.25" y="99.35382616724178" text-anchor="middle" font-size="11" fill="#333">132028</text>
+<rect x="660" y="70" width="12" height="12" fill="#1f77b4"/>
+<text x="678" y="81" font-size="12" fill="#333">Parent RSS</text>
+<rect x="660" y="90" width="12" height="12" fill="#ff7f0e"/>
+<text x="678" y="101" font-size="12" fill="#333">Child after fork</text>
+<rect x="660" y="110" width="12" height="12" fill="#2ca02c"/>
+<text x="678" y="121" font-size="12" fill="#333">Child after writes</text>
+</svg>

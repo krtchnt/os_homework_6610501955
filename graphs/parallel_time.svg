@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<title>Factorisation Time vs Threads</title>
+<line x1="60" y1="420" x2="660" y2="420" stroke="#333" stroke-width="1.5"/>
+<line x1="60" y1="60" x2="60" y2="420" stroke="#333" stroke-width="1.5"/>
+<line x1="60" y1="420.0" x2="660" y2="420.0" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="424.0" text-anchor="end" font-size="12" fill="#333">0.016</text>
+<line x1="60" y1="348.0" x2="660" y2="348.0" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="352.0" text-anchor="end" font-size="12" fill="#333">0.081</text>
+<line x1="60" y1="276.0" x2="660" y2="276.0" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="280.0" text-anchor="end" font-size="12" fill="#333">0.146</text>
+<line x1="60" y1="203.99999999999997" x2="660" y2="203.99999999999997" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="207.99999999999997" text-anchor="end" font-size="12" fill="#333">0.211</text>
+<line x1="60" y1="132.0" x2="660" y2="132.0" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="136.0" text-anchor="end" font-size="12" fill="#333">0.276</text>
+<line x1="60" y1="60.0" x2="660" y2="60.0" stroke="#ccc" stroke-width="0.5" />
+<text x="50" y="64.0" text-anchor="end" font-size="12" fill="#333">0.341</text>
+<line x1="60.0" y1="60" x2="60.0" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="60.0" y="440" text-anchor="middle" font-size="12" fill="#333">1</text>
+<line x1="145.71428571428572" y1="60" x2="145.71428571428572" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="145.71428571428572" y="440" text-anchor="middle" font-size="12" fill="#333">2</text>
+<line x1="231.42857142857142" y1="60" x2="231.42857142857142" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="231.42857142857142" y="440" text-anchor="middle" font-size="12" fill="#333">3</text>
+<line x1="317.1428571428571" y1="60" x2="317.1428571428571" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="317.1428571428571" y="440" text-anchor="middle" font-size="12" fill="#333">4</text>
+<line x1="402.85714285714283" y1="60" x2="402.85714285714283" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="402.85714285714283" y="440" text-anchor="middle" font-size="12" fill="#333">5</text>
+<line x1="488.57142857142856" y1="60" x2="488.57142857142856" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="488.57142857142856" y="440" text-anchor="middle" font-size="12" fill="#333">6</text>
+<line x1="574.2857142857142" y1="60" x2="574.2857142857142" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="574.2857142857142" y="440" text-anchor="middle" font-size="12" fill="#333">7</text>
+<line x1="660.0" y1="60" x2="660.0" y2="420" stroke="#eee" stroke-width="0.5" />
+<text x="660.0" y="440" text-anchor="middle" font-size="12" fill="#333">8</text>
+<text x="360.0" y="470" text-anchor="middle" font-size="14" fill="#111">Threads</text>
+<text x="15" y="240.0" transform="rotate(-90 15 240.0)" text-anchor="middle" font-size="14" fill="#111">Average time (ms)</text>
+<text x="360.0" y="30" text-anchor="middle" font-size="16" fill="#111" font-weight="bold">Factorisation Time vs Threads</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="60.00,170.83 145.71,94.35 231.43,173.66 317.14,164.17 402.86,155.64 488.57,125.10 574.29,186.84 660.00,173.58"/>
+<circle cx="60.00" cy="170.83" r="4" fill="#1f77b4"/>
+<circle cx="145.71" cy="94.35" r="4" fill="#1f77b4"/>
+<circle cx="231.43" cy="173.66" r="4" fill="#1f77b4"/>
+<circle cx="317.14" cy="164.17" r="4" fill="#1f77b4"/>
+<circle cx="402.86" cy="155.64" r="4" fill="#1f77b4"/>
+<circle cx="488.57" cy="125.10" r="4" fill="#1f77b4"/>
+<circle cx="574.29" cy="186.84" r="4" fill="#1f77b4"/>
+<circle cx="660.00" cy="173.58" r="4" fill="#1f77b4"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.5" points="60.00,347.14 145.71,375.32 231.43,387.34 317.14,396.28 402.86,399.18 488.57,392.01 574.29,387.15 660.00,395.65"/>
+<circle cx="60.00" cy="347.14" r="4" fill="#ff7f0e"/>
+<circle cx="145.71" cy="375.32" r="4" fill="#ff7f0e"/>
+<circle cx="231.43" cy="387.34" r="4" fill="#ff7f0e"/>
+<circle cx="317.14" cy="396.28" r="4" fill="#ff7f0e"/>
+<circle cx="402.86" cy="399.18" r="4" fill="#ff7f0e"/>
+<circle cx="488.57" cy="392.01" r="4" fill="#ff7f0e"/>
+<circle cx="574.29" cy="387.15" r="4" fill="#ff7f0e"/>
+<circle cx="660.00" cy="395.65" r="4" fill="#ff7f0e"/>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.5" points="60.00,412.12 145.71,416.55 231.43,415.64 317.14,418.44 402.86,419.69 488.57,420.00 574.29,415.54 660.00,415.56"/>
+<circle cx="60.00" cy="412.12" r="4" fill="#2ca02c"/>
+<circle cx="145.71" cy="416.55" r="4" fill="#2ca02c"/>
+<circle cx="231.43" cy="415.64" r="4" fill="#2ca02c"/>
+<circle cx="317.14" cy="418.44" r="4" fill="#2ca02c"/>
+<circle cx="402.86" cy="419.69" r="4" fill="#2ca02c"/>
+<circle cx="488.57" cy="420.00" r="4" fill="#2ca02c"/>
+<circle cx="574.29" cy="415.54" r="4" fill="#2ca02c"/>
+<circle cx="660.00" cy="415.56" r="4" fill="#2ca02c"/>
+<rect x="670" y="60" width="12" height="12" fill="#1f77b4"/>
+<text x="688" y="71" font-size="12" fill="#333">600851475143</text>
+<rect x="670" y="80" width="12" height="12" fill="#ff7f0e"/>
+<text x="688" y="91" font-size="12" fill="#333">9999999967</text>
+<rect x="670" y="100" width="12" height="12" fill="#2ca02c"/>
+<text x="688" y="111" font-size="12" fill="#333">899809363</text>
+</svg>
