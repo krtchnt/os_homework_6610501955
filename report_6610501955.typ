@@ -72,8 +72,8 @@ Observations:
   remaining factor and OpenMP overhead.
 
 The generated `data/parallel_summary.csv` tabulates averages, speedups, and
-Amdahl parallel fraction estimates via `P = (1 - 1/S) / (1 - 1/n)` where `S` is
-observed speedup and `n` is thread count, as derived from Amdahl's law
+Amdahl parallel fraction estimates via $P = (1 - 1/S) slash (1 - 1/n)$ where `S`
+is observed speedup and `n` is thread count, as derived from Amdahl's law
 @amdahl1967. These figures are referenced in Section 5 for cross-task synthesis.
 
 == 2. Copy-on-Write Demonstration (Rust)
@@ -82,8 +82,8 @@ observed speedup and `n` is thread count, as derived from Amdahl's law
 
 `cow` is a Rust binary that allocates configurable memory blocks (64-128 MB),
 initialises them with deterministic data, forks with `unsafe { fork() }`, and
-samples both RSS and `Private_Dirty` from `/proc/\<pid>/status` and
-`/proc/\<pid>/smaps_rollup`. IPC uses a POSIX pipe to serialise child
+samples both RSS and `Private_Dirty` from `/proc/<pid>/status` and
+`/proc/<pid>/smaps_rollup`. IPC uses a POSIX pipe to serialise child
 measurements back to the parent. The child touches the first byte of every page
 to trigger CoW.
 
@@ -121,19 +121,19 @@ The `deadlock` program provides three modes.
 === 3.1 Deadlock Avoidance (Banker's Algorithm)
 
 Using the classic example from Silberschatz et al. @silberschatz2018, the tool
-computes a safe sequence `[P1, P3, P4, P0, P2]` and evaluates ad-hoc requests.
-For instance, P1's request `[1,0,2]` is deemed safe, whereas P0's `[3,3,0]`
-would violate safety and is rejected. The implementation constructs the `need`
-matrix and iteratively tests for feasible completion sequences.
+computes a safe sequence $[P_1, P_3, P_4, P_0, P_2]$ and evaluates ad-hoc
+requests. For instance, P1's request $[1,0,2]$ is deemed safe, whereas P0's
+$[3,3,0]$ would violate safety and is rejected. The implementation constructs
+the `need` matrix and iteratively tests for feasible completion sequences.
 
 === 3.2 Deadlock Detection
 
-Three worker threads (`P0`, `P1`, `P2`) request resources cyclically: each locks
-one unit then waits for the next resource, satisfying Coffman's conditions. The
-manager tracks allocations and waiters, then builds a wait-for graph. When
-threads block, a monitor thread runs cycle detection - once
-`[P2 -> P0 -> P1 -> P2]` is detected, the program halts workers by signalling
-`stop_all`.
+Three worker threads ($P_0$, $P_1$, $P_2$) request resources cyclically: each
+locks one unit then waits for the next resource, satisfying Coffman's
+conditions. The manager tracks allocations and waiters, then builds a wait-for
+graph. When threads block, a monitor thread runs cycle detection - once
+$[P_2 -> P_0 -> P_1 -> P_2]$ is detected, the program halts workers by
+signalling `stop_all`.
 
 === 3.3 Deadlock Resolution
 
