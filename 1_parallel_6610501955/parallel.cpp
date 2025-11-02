@@ -5,18 +5,18 @@
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
-#include <cstring>
 #include <cstdlib>
+#include <cstring>
 #include <fstream>
 #include <iostream>
 #include <optional>
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <sys/resource.h>
 #include <tuple>
 #include <utility>
 #include <vector>
-#include <sys/resource.h>
 
 namespace {
 
@@ -183,13 +183,15 @@ uint64_t find_smallest_factor_parallel(uint64_t n, int threads,
     return 3;
   }
 
-  const uint64_t limit = static_cast<uint64_t>(std::sqrt(static_cast<long double>(n)));
+  const uint64_t limit =
+      static_cast<uint64_t>(std::sqrt(static_cast<long double>(n)));
   uint64_t best_factor = n;
 
   omp_set_num_threads(threads);
   size_t local_tests = 0;
 
-#pragma omp parallel for schedule(runtime) reduction(min : best_factor) reduction(+: local_tests)
+#pragma omp parallel for schedule(runtime) reduction(min : best_factor)        \
+    reduction(+ : local_tests)
   for (uint64_t candidate = 5; candidate <= limit; candidate += 6) {
     const uint64_t offsets[2] = {0, 2};
     for (uint64_t offset : offsets) {
@@ -213,7 +215,7 @@ uint64_t find_smallest_factor_parallel(uint64_t n, int threads,
 
 long read_max_rss_kb() {
 #ifdef __linux__
-  struct rusage usage {};
+  struct rusage usage{};
   if (getrusage(RUSAGE_SELF, &usage) == 0) {
     return usage.ru_maxrss;
   }
@@ -248,7 +250,8 @@ FactorRun factor_number(uint64_t number, int threads) {
 
   auto end = std::chrono::steady_clock::now();
   run.elapsed_ms =
-      std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(end - start)
+      std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(
+          end - start)
           .count();
   run.modulus_tests = modulus_tests;
   run.factors = std::move(factors);
@@ -301,7 +304,7 @@ void prepare_schedule(const Config &config) {
   omp_set_dynamic(0);
 }
 
-}  // namespace
+} // namespace
 
 int main(int argc, char **argv) {
   Config config{};
@@ -319,7 +322,8 @@ int main(int argc, char **argv) {
   if (config.output_path) {
     csv_file.open(*config.output_path, std::ios::out | std::ios::trunc);
     if (!csv_file) {
-      std::cerr << "Failed to open output file: " << *config.output_path << "\n";
+      std::cerr << "Failed to open output file: " << *config.output_path
+                << "\n";
       return EXIT_FAILURE;
     }
     csv_stream = &csv_file;
@@ -331,7 +335,8 @@ int main(int argc, char **argv) {
   }
 
   for (uint64_t number : config.numbers) {
-    for (int threads = config.min_threads; threads <= config.max_threads; ++threads) {
+    for (int threads = config.min_threads; threads <= config.max_threads;
+         ++threads) {
       for (int repeat = 1; repeat <= config.repeats; ++repeat) {
         FactorRun run = factor_number(number, threads);
         run.repeat_index = repeat;
