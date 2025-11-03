@@ -71,7 +71,6 @@ The simulation uses three resource types and three worker threads. Deadlock avoi
 ### Analysis Scripts & Plots
 
 ```bash
-cd /home/fdl/Code/._/0/os_homework_6610501955
 python analysis/generate_plots.py
 ```
 
